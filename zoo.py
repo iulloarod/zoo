@@ -1,68 +1,74 @@
 class Animal:
-    def __init__(self,name="",age=1,health=50,happyness=50):
+    def __init__(self,name= "nombrame!",age=2,health=100,happyness=100):
         self.name= name
-        self.age= age 
+        self.age= age
         self.health = health
         self.happyness = happyness
     
     def display_info(self):
         print(f'Animal´s name:{self.name}. It´s Health is: {self.health}. It´s Happyness is: {self.happyness}')
+        return self
     
     def feed_animal(self,kg_amount):
         self.health += kg_amount
         self.happyness += kg_amount
+        return self
+
 
 class Sheep(Animal):
     def __init__(self,wool_amount):
         self.wool_amount= wool_amount
-        super().__init__(self,name="",age=1,health=80,happyness=50)
+        super().__init__(self,name,age,health,happyness)
 
     def feed_animal(self,kg_amount):
         self.health = kg_amount
         self.happyness = kg_amount *1.1
+        return self
+
 
         
 class Chicken(Animal):
     def __init__(self,tail):
         self.tail= tail
-        super().__init__(self,name="",age=1,health=90,happyness=70)
+        super().__init__(self,name,age,health,happyness)
 
     def feed_animal(self,kg_amount):
         self.health = kg_amount*1.2
         self.happyness = kg_amount*1.3
+        return self
         
 class Traro(Animal):
     def __init__(self,crown):
         self.crown = crown
-        super().__init__(self,name="",age=1,health=70,happyness=100)
+        super().__init__(self,name,age,health,happyness)
+        return self
 
     def feed_animal(self,kg_amount):
         self.health = kg_amount*1.4
         self.happyness = kg_amount*1.1
+        return self
 
 class Zoo:
     def __init__(self, zoo_name):
         self.animals = []
         self.name = zoo_name
 
-    def add_sheep(self, name):
-        self.animals.append( Sheep(name) )
+    def add_sheep(self,name="nombrame!"):
+        self.animals.append()
+        return self
 
-    def add_chicken(self, name):
-        self.animals.append( Chicken(name) )
+    def add_chicken(name="nombrame!"):
+        self.animals.append()
+        return self
 
-    def add_traro(self, name):
-        self.animals.append( Traro(name) )
+    def add_traro(self,name="nombrame!"):
+        self.append()
+        return self
 
-    def print_all_info(self):
-        print("-"*30, self.name, "-"*30)
-        for animal in self.animals:
-            animal.display_info()
+    # def print_all_info(self):
+    #     print("-"*30, self.name, "-"*30)
+    #     for animal in self.animals:
+    #         animal.display_info()
 
-zoo1 = Zoo("Nacho's Zoo")
-zoo1.add_sheep("76")
-zoo1.add_sheep("Tripleta")
-zoo1.add_chicken("Flor_de_haba")
-zoo1.add_chicken("Locura")
-zoo1.add_traro("Leftraro")
-zoo1.print_all_info()
+
+Zoo.add_chicken()
